@@ -10,8 +10,18 @@ class RegistrosController {
 
         def registros = Registro.findAll()
 
-        //registros.sort { Registro r1, Registro r2 -> r1.dataInicial.getDayOfMonth() < r1.dataInicial.getDayOfMonth()}
+        registros.sort { it.dataInicial.getDayOfMonth() }
 
         render registros as JSON
+    }
+
+
+    def save(Registro registro) {
+        println(registro)
+        registro.dataFinal = registro.dataInicial
+        registro.grupo = Grupo.get(3)
+        registro.save(flush: true)
+
+        return false;
     }
 }

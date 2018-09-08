@@ -5,7 +5,7 @@
       <template v-for="(item) in registros">
 
 
-        <v-list-tile :key="item.descricao" avatar>
+        <v-list-tile :key="item.id" avatar>
           <v-list-tile-action>
             <v-btn icon  @click="item.soma = !item.soma">
               <v-icon v-if="item.soma" color="grey">
@@ -99,7 +99,6 @@ export default {
     axios
       .get("/registros.json")
       .then(response => {
-        console.log("AQUI"); /* eslint-disable-line no-console */
         console.log(response.data); /* eslint-disable-line no-console */
         this.registros = response.data;
       })

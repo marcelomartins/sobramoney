@@ -12,12 +12,7 @@ export default new Router({
       path: '/', name: 'lista', component: ListaRegistros
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/edita', name: 'edita', component: () => import(/* webpackChunkName: "about" */ './components/EditaRegistros.vue')
     }
   ]
 })
