@@ -19,7 +19,7 @@ class RegistrosController {
     def save(Registro registro) {
         println(registro)
         registro.dataFinal = registro.dataInicial
-        registro.grupo = Grupo.get(3)
+        registro.grupo = Grupo.get(1)
         registro.save(flush: true)
 
         return false;

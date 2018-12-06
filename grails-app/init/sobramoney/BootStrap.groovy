@@ -5,6 +5,11 @@ import grails.converters.JSON
 class BootStrap {
 
     def init = { servletContext ->
+
+
+        new Grupo(id: 1, nome: "Lançamentos Diversos").save(flush: true)
+
+
         JSON.registerObjectMarshaller(Registro) { registro ->
             def result = [:]
             result['id'] = registro.id
