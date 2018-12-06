@@ -10,6 +10,10 @@ class RegistrosController {
 
         def registros = Registro.findAll()
 
+        if (!registros) {
+            registros = []
+        }
+
         registros.sort { it.dataInicial.getDayOfMonth() }
 
         render registros as JSON
