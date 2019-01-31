@@ -9,14 +9,14 @@
 ## Desenvolvimento
 * cd vue-app
 * yarn build --dest='../src/main/webapp/' --mode='development' --watch
-* Em outra janela: grails run-app
+* Em outra janela: ./gradlew run
 
 
 ## Teste
 * yarn build --dest='../src/main/webapp/' (no diretório vue-app)
-* grails run-app
+* ./gradlew run
 
 
 ## Gerar Pacote
 * yarn build --dest='../src/main/webapp/' (no diretório vue-app)
-* grails war
+* ./gradlew war
