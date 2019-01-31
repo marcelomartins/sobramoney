@@ -4,7 +4,7 @@
 * cd vue-app
 * npm install
 * yarn build --dest='../src/main/webapp/' --mode='development' --watch
-* Em outra janela: ./gradlew run
+* Em outra janela: ./gradlew bootRun
 
 
 ## Teste
