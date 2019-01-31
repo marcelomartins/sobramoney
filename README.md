@@ -10,10 +10,12 @@
 ## Teste
 * npm install
 * yarn build --dest='../src/main/webapp/' (no diretório vue-app)
-* ./gradlew run
+* ./gradlew bootRun
 
 
 ## Gerar Pacote
 * npm install
 * yarn build --dest='../src/main/webapp/' (no diretório vue-app)
-* ./gradlew war
+* ./gradlew bootRun
+
+
