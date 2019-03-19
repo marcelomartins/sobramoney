@@ -3,6 +3,7 @@ Thumbs.db
 .gradle
 build/
 out/
+bin/
 .idea
 *.iml
 *.ipr
@@ -10,3 +11,5 @@ out/
 .project
 .settings
 .classpath
+src/main/webapp/
+package-lock.json
