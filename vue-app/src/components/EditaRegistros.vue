@@ -29,9 +29,7 @@ export default {
   },
 
   watch: {
-    registro() {
-      console.log(this.registro); /* eslint-disable-line no-console */
-    }
+   
   },
 
   methods: {

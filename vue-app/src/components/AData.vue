@@ -32,7 +32,7 @@ export default {
   watch: {
     date() {
       this.valorData = this.formatDate(this.date);
-      this.$emit("input", this.date);
+      this.$emit("input", this.valorData);
     }
   },
 
