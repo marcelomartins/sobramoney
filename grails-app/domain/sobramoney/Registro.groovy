@@ -18,7 +18,7 @@ class Registro {
     }
 
     def String toString() {
-        return "${descricao} ${dataInicial} ${dataFinal} ${valor}"
+        return "${descricao} - ${dataInicial} - ${dataFinal} -  ${valor}"
     }
 
 }
