@@ -1,7 +1,7 @@
 <template>
   <v-menu
     :close-on-content-click="false"
-    v-model="menu1"
+    v-model="menu"
     :nudge-right="40"
     lazy
     transition="scale-transition"
@@ -12,7 +12,7 @@
   >
     <v-text-field label="Data" slot="activator" v-model="valorData" persistent-hint readonly></v-text-field>
 
-    <v-date-picker v-model="date" no-title @input="menu1 = false" locale="pt-BR"></v-date-picker>
+    <v-date-picker v-model="date" no-title @input="menu = false" locale="pt-BR"></v-date-picker>
   </v-menu>
 </template>
 
@@ -23,9 +23,9 @@ export default {
   props: ["value"],
   data() {
     return {
-      menu1: false,
-      date: null,
-      valorData: ""
+      menu: false,
+      date: this.parseDate(this.value),
+      valorData: this.value
     };
   },
 
@@ -42,6 +42,12 @@ export default {
 
       const [year, month, day] = date.split("-");
       return `${day}/${month}/${year}`;
+    },
+    parseDate(date) {
+      if (!date) return null;
+
+      const [day, month, year] = date.split("/");
+      return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
     }
   }
 };

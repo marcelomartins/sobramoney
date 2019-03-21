@@ -24,7 +24,9 @@ export default {
   data() {
     return {
       valid: false,
-      registro: {}
+      registro: {
+        dataInicial: "10/03/2019"
+      }
     };
   },
 
